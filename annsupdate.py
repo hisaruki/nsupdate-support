@@ -22,7 +22,6 @@ arps = [x.split() for x in arps if x.find("Address") < 0]
 
 text = 'server ' + args.nameserver + "\n"
 
-
 for arp in arps:
     ip = arp[0]
     if not ipaddress.ip_address(ip) in args.network.hosts():
